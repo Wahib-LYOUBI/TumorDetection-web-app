@@ -1,0 +1,18 @@
+# .gitignore (at root)
+
+# Node
+client/node_modules/
+client/dist/
+
+# Python
+server/venv/
+__pycache__/
+*.pyc
+
+# Env
+*.env
+
+# VSCode or system files
+.vscode/
+.DS_Store
+
