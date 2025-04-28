@@ -90,23 +90,40 @@ const TumorDetection = () => {
 
         {/* Right Panel */}
         <div style={styles.rightPanel}>
-          {resultImage ? (
-            <div>
-              <h2>Prediction Result</h2>
-              <img src={resultImage} alt="Result" style={styles.resultImage} />
-              <p>{prediction}</p>
-              <a href={resultImage} download="tumor_prediction.jpg">
-                 <button style={styles.downloadButton}>
-                    <FaDownload style={{ marginRight: '8px' }} />
-                      Download Result
-                </button>
-              </a>
+  {resultImage ? (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h2 style={{ marginBottom: '10px' }}>Prediction Result</h2>
 
-            </div>
-          ) : (
-            <h3>No result to display</h3>
-          )}
-        </div>
+      {/* Fullscreen Button placed just below the title */}
+      <button 
+        style={styles.fullscreenButton}
+        onClick={() => {
+          const newWindow = window.open();
+          newWindow.document.write(`<img src="${resultImage}" style="width:100%; height:auto;" />`);
+        }}
+      >
+        View Fullscreen
+      </button>
+
+      {/* Prediction Result Image */}
+      <img src={resultImage} alt="Result" style={styles.resultImage} />
+
+      <p>{prediction}</p>
+
+      {/* Download Button */}
+      <a href={resultImage} download="tumor_prediction.jpg">
+        <button style={styles.downloadButton}>
+          <FaDownload style={{ marginRight: '8px' }} />
+          Download Result
+        </button>
+      </a>
+
+    </div>
+  ) : (
+    <h3>No result to display</h3>
+  )}
+</div>
+
       </div>
     </div>
   );
@@ -117,12 +134,12 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100vh',
-    backgroundColor: 'dimgray', // light gray for the whole page
+    height: '96vh',
+    backgroundColor: '#023149', 
   },
   
   header: {
-    backgroundColor: 'dimgray',
+    backgroundColor: '#023149',
     textAlign: 'center',
     padding: '0px',
   },
@@ -158,18 +175,18 @@ const styles = {
     fontSize: '23px', // Increased
     fontWeight: '700',
     marginBottom: '20px',
-    color: '#333',
+    color: 'gray',
     textTransform: 'uppercase',
   },
   image: {
     maxWidth: '100%',
-    maxHeight: '400px',
+    maxHeight: '401px',
     marginTop: '20px',
   },
   resultImage: {
     maxWidth: '100%',
     maxHeight: '400px',
-    marginTop: '20px',
+    marginTop: '100px',
   },
   uploadButton: {
     padding: '18px 36px',
@@ -182,7 +199,7 @@ const styles = {
     marginTop: '30px',
   },
   downloadButton: {
-    marginTop: '20px',
+    marginTop: '2px',
     padding: '14px 28px',
     backgroundColor: '#007bff',
     color: 'white',
@@ -209,6 +226,16 @@ const styles = {
     marginBottom: '20px',
     transition: 'background-color 0.3s ease',
   },  
+  fullscreenButton: {
+    marginTop: '0px',
+    padding: '12px 24px',
+    backgroundColor: '#ffc107', // Yellow color
+    color: 'black',
+    border: 'none',
+    borderRadius: '8px',
+    fontSize: '18px',
+    cursor: 'pointer',
+  },
   
   error: {
     color: 'red',

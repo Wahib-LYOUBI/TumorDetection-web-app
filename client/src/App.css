@@ -42,6 +42,7 @@
 }
 body {
   margin: 0;
-  background-color: dimgray; /* Light gray */
+  padding: 0;
+  background-color: #023149; /* Light gray */
   font-size: 18px;
 }
