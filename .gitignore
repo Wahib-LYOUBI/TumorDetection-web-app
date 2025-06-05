@@ -6,6 +6,7 @@ client/dist/
 
 # Python
 server/venv/
+server/app/history/
 __pycache__/
 *.pyc
 
@@ -16,3 +17,4 @@ __pycache__/
 .vscode/
 .DS_Store
 
+shell.nix
