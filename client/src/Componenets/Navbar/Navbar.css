@@ -1,0 +1,352 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 6%;
+    background-color: #dfdfdf;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #c4304e;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 7px;
+  }
+  
+  .navbar a {
+    position: relative;
+    font-size: 18px;
+    color: #c4304e;
+    font-weight: 500;
+    margin-left: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #a02a42;
+  }
+  
+  .navbar a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #c4304e;
+    transition: .3s;
+  }
+  
+  .navbar a:hover::before {
+    width: 100%;
+  }
+  
+  /* About Modal Styles */
+  .about-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .about-modal {
+    background: white;
+    border-radius: 1rem;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .about-logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .about-logo-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+    border: 3px solid #c4304e;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c4304e;
+    margin: 0;
+  }
+  
+  .about-close {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .about-close:hover {
+    background: #f3f4f6;
+    color: #374151;
+  }
+  
+  .about-content {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+  
+  .about-section {
+    margin-bottom: 2rem;
+  }
+  
+  .about-section h3 {
+    color: #c4304e;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #c4304e;
+    padding-bottom: 0.5rem;
+  }
+  
+  .about-section p {
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .model-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    border-left: 4px solid #c4304e;
+  }
+  
+  .feature-icon {
+    font-size: 1.2rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .team-member {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .member-avatar {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .team-member h4 {
+    color: #c4304e;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member p {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member span {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+  
+  .mission-vision {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .mission,
+  .vision {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    border-radius: 1rem;
+    border-left: 4px solid #c4304e;
+  }
+  
+  .mission h4,
+  .vision h4 {
+    color: #c4304e;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .tech-specs {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .spec-item {
+    padding: 0.75rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    border-left: 3px solid #c4304e;
+  }
+  
+  .spec-item strong {
+    color: #c4304e;
+  }
+  
+  .about-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .disclaimer {
+    background: #fef3cd;
+    border: 1px solid #fbbf24;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: #92400e;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      padding: 15px 4%;
+    }
+  
+    .logo {
+      font-size: 24px;
+    }
+  
+    .logo-image {
+      width: 35px;
+      height: 35px;
+      margin-right: 8px;
+    }
+  
+    .navbar a {
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  
+    .about-modal {
+      margin: 1rem;
+      max-height: 95vh;
+    }
+  
+    .about-header {
+      padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+  
+    .about-content {
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+    }
+  
+    .about-title {
+      font-size: 1.5rem;
+    }
+  
+    .about-logo-image {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .model-features {
+      grid-template-columns: 1fr;
+    }
+  
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .mission-vision {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      padding: 12px 3%;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .logo-image {
+      width: 30px;
+      height: 30px;
+      margin-right: 6px;
+    }
+  
+    .navbar a {
+      font-size: 14px;
+      margin-left: 15px;
+    }
+  
+    .about-overlay {
+      padding: 0.5rem;
+    }
+  }
+  
