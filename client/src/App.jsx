@@ -3,7 +3,6 @@ import Header from './components/Header/Header';
 import UploadSection from './components/UploadSection/UploadSection';
 import Segmentation from './components/Segmentation/Segmentation';
 import './App.css';
-import HowItWorks from './components/HowItWorks/HowItWorks';
 
 const App = () => {
   const [originalImage, setOriginalImage] = useState(null);
@@ -13,10 +12,10 @@ const App = () => {
     setOriginalImage(previewUrl); // For displaying in Segmentation
 
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('mammogram', file);
 
     try {
-      const response = await fetch('/api/segment', {
+      const response = await fetch('http://localhost:5000/', {
         method: 'POST',
         body: formData,
       });
