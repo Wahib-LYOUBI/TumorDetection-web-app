@@ -63,16 +63,6 @@ export default function Segmentation({ originalImage, resultImage, onGoBack }) {
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="actions-container">
-          <button onClick={onGoBack} className="secondary-button">
-            Analyze Another Image
-          </button>
-          <button onClick={handleDownload} className="primary-button">
-            <Download className="button-icon" />
-            Download Result
-          </button>
-        </div>
       </div>
     </div>
   );

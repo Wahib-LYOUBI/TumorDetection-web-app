@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import logo from '../../assets/ribbon1.png'
+import logo from '../../assets/pink-ribbon (1).png'
 
 const Header = () => {
   return (
@@ -9,8 +9,7 @@ const Header = () => {
         <h1 className='logoname'>BreastCare AI</h1>
 
         <nav className='navbar'>
-            <a href='/'>Upload</a>
-            <a href='/'>Prediction</a>
+            <a href='/'>Home</a>
             <a href='/'>About</a>
         </nav>
     </header>

@@ -11,7 +11,9 @@
   max-height: 100vh;
   background: #ebebeb;
 }
-
+body {
+  background: #ffffff  ;
+}
 a {
   text-decoration: none;
 }
