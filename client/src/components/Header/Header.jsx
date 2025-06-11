@@ -9,8 +9,6 @@ const Header = () => {
         <h1 className='logoname'>BreastCare AI</h1>
 
         <nav className='navbar'>
-            <a href='/'>Home</a>
-            <a href='/'>About</a>
         </nav>
     </header>
   )
